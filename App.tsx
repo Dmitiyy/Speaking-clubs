@@ -1,20 +1,23 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar as StatusBarRN } from 'react-native';
+import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
+import styled from 'styled-components/native';
+import { Tabs } from './src/components/Tabs';
+
+const MainArea = styled.SafeAreaView`
+  flex: 1;
+  margin-top: ${StatusBarRN.currentHeight || 0}px;
+`;
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer theme={{
+      ...DefaultTheme, colors: {...DefaultTheme.colors, background: '#EAF8EE'}
+    }}>
+      <MainArea>
+        <Tabs />
+        <StatusBar style="auto" />
+      </MainArea>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
