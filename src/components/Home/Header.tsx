@@ -1,4 +1,4 @@
-import { FC, Fragment } from "react";
+import { FC } from "react";
 import { View } from 'react-native';
 import Feather from 'react-native-vector-icons/Feather';
 import AntDesign from 'react-native-vector-icons/AntDesign';
@@ -16,6 +16,7 @@ import {
   NextPLus,
 } from './styled/Header.styled';
 import { withPressAnimation } from "../../utils/withPressAnimation";
+import { SectionWrap } from "./styled/Home.styled";
 
 const NextBtn: FC = () => (
   <NextPLus>
@@ -27,7 +28,7 @@ export const Header: FC = () => {
   const NextAnimatedBtn = withPressAnimation(NextBtn);
 
   return (
-    <Fragment>
+    <SectionWrap>
       <WrapHead>
         <HelloTitle>Hello, <Highlighted>John Smith</Highlighted></HelloTitle>
         <AntDesign name="user" size={27} color="black" />
@@ -47,6 +48,6 @@ export const Header: FC = () => {
           </NextTools>
         </NextContent>
       </Next>
-    </Fragment>
+    </SectionWrap>
   )
 };

@@ -2,5 +2,9 @@ import styled from "styled-components/native";
 
 export const Container = styled.View`
   flex: 1;
-  padding: 20px;
+`;
+
+export const SectionWrap = styled.View`
+  padding-left: 15px;
+  padding-right: 15px;
 `;
