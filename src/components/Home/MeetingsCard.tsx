@@ -8,6 +8,7 @@ import {
   MeetingsCard, 
 } from "./styled/Meetings.styled";
 import { withPressAnimation } from "../../utils/withPressAnimation";
+import { Details } from '../Details';
 
 export const MeetingsCardComponent = () => {
   const CardBtnAnimated = withPressAnimation(CardBtn);
@@ -16,7 +17,7 @@ export const MeetingsCardComponent = () => {
     <MeetingsCard>
       <CardTitleWrap>
         <CardTitle numberOfLines={1}>Minions The Rise of Gru</CardTitle>
-        <Feather name="more-horizontal" size={35} color="black" />
+        <Details />
       </CardTitleWrap>
       <CardDescription numberOfLines={5}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus architecto ipsa dolor dicta vitae aliquid sequi, provident voluptate soluta distinctio eaque! Eveniet,

@@ -17,6 +17,7 @@ import {
 } from './styled/Header.styled';
 import { withPressAnimation } from "../../utils/withPressAnimation";
 import { SectionWrap } from "./styled/Home.styled";
+import { Details } from "../Details";
 
 const NextBtn: FC = () => (
   <NextPLus>
@@ -43,7 +44,7 @@ export const Header: FC = () => {
             </NextDescription>
           </View>
           <NextTools>
-            <Feather name="more-horizontal" size={35} color="black" />
+            <Details />
             <NextAnimatedBtn />
           </NextTools>
         </NextContent>
