@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import Feather from 'react-native-vector-icons/Feather';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { withPressAnimation } from "../utils/withPressAnimation";
@@ -7,13 +7,12 @@ import { DetailsContent, DetailsItem, DetailsText, DetailsWrap } from "./Home/st
 const Icon = () => (<Feather name="more-horizontal" size={35} color="black" />);
 
 export const Details: FC = () => {
-  const AnimatedIcon = withPressAnimation(Icon);
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);  
+  const AnimatedIcon = withPressAnimation(Icon, () => setIsOpen(prev => !prev));
 
   return (
     <DetailsWrap>
-      {/* <AnimatedIcon /> */}
-      <Feather name="more-horizontal" size={35} color="black" onPress={() => {setIsOpen(prev => !prev)}} />
+      <AnimatedIcon />
       {
         isOpen && (
           <DetailsContent>
