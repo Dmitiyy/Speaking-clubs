@@ -1,4 +1,5 @@
 import Ripple from 'react-native-material-ripple';
+import { useNavigation } from '@react-navigation/native';
 import { 
   CardBtnText,
   CardDescription,
@@ -10,6 +11,8 @@ import {
 import { Details } from '../Details';
 
 export const MeetingsCardComponent = () => {
+  const navigation = useNavigation();
+
   return (
     <MeetingsCard>
       <CardTitleWrap>
@@ -19,7 +22,7 @@ export const MeetingsCardComponent = () => {
       <CardDescription numberOfLines={5}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus architecto ipsa dolor dicta vitae aliquid sequi, provident voluptate soluta distinctio eaque! Eveniet,
       </CardDescription>
-      <Ripple rippleContainerBorderRadius={8}>
+      <Ripple rippleContainerBorderRadius={8} onPress={() => {navigation.navigate('Meeting', {})}}>
         <CardEnroll>
           <CardBtnText>Enroll</CardBtnText>
         </CardEnroll>

@@ -6,8 +6,21 @@ import { Header } from '../components/Home/Header';
 import { Meetings } from '../components/Home/Meetings';
 import { MeetingsCardComponent } from '../components/Home/MeetingsCard';
 import { FlatGrid } from 'react-native-super-grid';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { MeetingScreen } from './MeetingScreen';
+
+const HomeStack = createNativeStackNavigator();
 
 export const HomeScreen: FC = () => {
+  return (
+    <HomeStack.Navigator initialRouteName='Initial' screenOptions={{headerShown: false}}>
+      <HomeStack.Screen name="Initial" component={HomeDefault} />
+      <HomeStack.Screen name="Meeting" component={MeetingScreen} />
+    </HomeStack.Navigator> 
+  )
+}
+
+const HomeDefault: FC = () => {
   return (
     <Container>
       <FlatGrid
