@@ -9,7 +9,12 @@ import { FlatGrid } from 'react-native-super-grid';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { MeetingScreen } from './MeetingScreen';
 
-const HomeStack = createNativeStackNavigator();
+export type RootStackParamList = {
+  Initial: undefined;
+  Meeting: undefined;
+} 
+
+const HomeStack = createNativeStackNavigator<RootStackParamList>();
 
 export const HomeScreen: FC = () => {
   return (
