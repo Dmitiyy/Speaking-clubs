@@ -1,4 +1,6 @@
+import { LinearGradient } from 'expo-linear-gradient';
 import styled from "styled-components/native";
+import Ripple from 'react-native-material-ripple';
 
 export const MeetingWrap = styled.View`
   padding: 15px;
@@ -115,4 +117,36 @@ export const QuestionsText = styled.Text<{ top: boolean }>`
   color: #000;
   margin-bottom: ${({ top }) => !top ? 5 : 0}px;
   margin-top: ${({ top }) => !top ? 5 : 0}px;
+`;
+
+export const EnrollWrap = styled.View`
+  width: 100%;
+  background: transparent;
+`;
+
+export const EnrollBtn = styled(LinearGradient as any).attrs({
+  start: { x: 0, y: 0 },
+  end: { x: 1, y: 1 },
+  colors: ['#96E6B3', '#2DC653']
+})`
+  min-width: 130px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 100px;
+  background: #52b788;
+`;
+
+export const EnrollText = styled.Text`
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+`;
+
+export const RippleEnroll = styled(Ripple as any).attrs({
+  rippleContainerBorderRadius: 100
+})`
+  margin-left: 15px;
+  margin-bottom: 10px;
+  margin-right: 15px;
 `;

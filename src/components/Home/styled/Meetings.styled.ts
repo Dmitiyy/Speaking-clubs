@@ -20,9 +20,9 @@ export const RippleBtn = styled(Ripple as any).attrs({
 `;
 
 export const FilterBtn = styled(LinearGradient as any).attrs({
-  start: {x: 0, y: 0}, 
-  end: {x: 1, y: 1}, 
-  colors: ['#96E6B3', '#2DC653'] 
+  start: { x: 0, y: 0 },
+  end: { x: 1, y: 1 },
+  colors: ['#96E6B3', '#2DC653']
 })`
   min-width: 130px;
   justify-content: center;
@@ -32,20 +32,20 @@ export const FilterBtn = styled(LinearGradient as any).attrs({
   background: #52b788;
 `;
 
-export const FilterText = styled.Text<{color: string}>`
-  color: ${({color}) => color};
+export const FilterText = styled.Text<{ color: string }>`
+  color: ${({ color }) => color};
   font-size: 16px;
   font-weight: bold;
 `;
 
-export const FilterInactive = styled.View<{bg: string}>`
+export const FilterInactive = styled.View<{ bg: string }>`
   width: 100%;
   height: 38px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 100px;
-  background-color: ${({bg}) => bg};
+  background-color: ${({ bg }) => bg};
 `;
 
 export const MeetingsCard = styled.View`
