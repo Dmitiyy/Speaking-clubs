@@ -12,16 +12,16 @@ import { MeetingScreen } from './MeetingScreen';
 export type RootStackParamList = {
   Initial: undefined;
   Meeting: undefined;
-} 
+}
 
 const HomeStack = createNativeStackNavigator<RootStackParamList>();
 
 export const HomeScreen: FC = () => {
   return (
-    <HomeStack.Navigator initialRouteName='Initial' screenOptions={{headerShown: false}}>
+    <HomeStack.Navigator initialRouteName='Initial' screenOptions={{ headerShown: false }}>
       <HomeStack.Screen name="Initial" component={HomeDefault} />
       <HomeStack.Screen name="Meeting" component={MeetingScreen} />
-    </HomeStack.Navigator> 
+    </HomeStack.Navigator>
   )
 }
 
@@ -29,7 +29,7 @@ const HomeDefault: FC = () => {
   return (
     <Container>
       <FlatGrid
-        data={[1,2,3,4,5,6]}
+        data={[1, 2, 3, 4, 5, 6]}
         renderItem={() => (<MeetingsCardComponent />)}
         ListHeaderComponent={() => (
           <Fragment>
@@ -48,5 +48,5 @@ const HomeDefault: FC = () => {
 const styles = StyleSheet.create({
   list: {
     marginTop: -5,
-  },
+  }
 });

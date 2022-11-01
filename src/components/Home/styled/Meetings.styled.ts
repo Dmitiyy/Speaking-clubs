@@ -5,6 +5,7 @@ import Ripple from 'react-native-material-ripple';
 export const MeetingsCaption = styled.Text`
   font-size: 20px;
   margin-top: 20px;
+  font-family: Montserrat-Medium;
 `;
 
 export const MeetingsFilter = styled.View`
@@ -34,8 +35,8 @@ export const FilterBtn = styled(LinearGradient as any).attrs({
 
 export const FilterText = styled.Text<{ color: string }>`
   color: ${({ color }) => color};
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 15px;
+  font-family: Montserrat-Bold;
 `;
 
 export const FilterInactive = styled.View<{ bg: string }>`
@@ -63,13 +64,15 @@ export const CardTitleWrap = styled.View`
 `;
 
 export const CardTitle = styled.Text`
-  font-size: 19px;
+  font-size: 17px;
   width: 90px;
+  font-family: Montserrat-Medium;
 `;
 
 export const CardDescription = styled.Text`
   font-size: 14px;
   margin-bottom: 12px;
+  font-family: Montserrat-Medium;
 `;
 
 export const CardEnroll = styled.View`
@@ -82,6 +85,6 @@ export const CardEnroll = styled.View`
 
 export const CardBtnText = styled.Text`
   color: #10451D;
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 15px;
+  font-family: Montserrat-Bold;
 `;

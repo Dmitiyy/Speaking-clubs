@@ -9,16 +9,16 @@ export const MeetingWrap = styled.View`
 `;
 
 export const MeetingCaption = styled.Text`
-  font-weight: 700;
   font-size: 24px;
   color: #000;
+  font-family: Montserrat-Bold;
 `;
 
 export const MeetingDescription = styled.Text`
-  font-size: 18px;
+  font-size: 16px;
   line-height: 26px;
-  font-weight: 400;
   margin-top: 10px;
+  font-family: Montserrat-Medium;
 `;
 
 //* Date cards
@@ -54,8 +54,8 @@ export const DateCardIcon = styled.View`
 
 export const DateCardText = styled.Text`
   color: white;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 18px;  
+  font-family: Montserrat-Bold;
 `;
 
 export const DateWrap = styled.View`
@@ -78,6 +78,7 @@ export const Questions = styled.View`
 export const QuestionsTitle = styled.Text`
   font-size: 18px;
   color: #000;
+  font-family: Montserrat-Medium;
 `;
 
 export const QuestionsOpen = styled.View`
@@ -115,6 +116,7 @@ export const QuestionsContent = styled.View<{ isOpen: boolean }>`
 export const QuestionsText = styled.Text<{ top: boolean }>`
   font-size: 16px;
   color: #000;
+  font-family: Montserrat-Medium;
   margin-bottom: ${({ top }) => !top ? 5 : 0}px;
   margin-top: ${({ top }) => !top ? 5 : 0}px;
 `;
@@ -139,8 +141,8 @@ export const EnrollBtn = styled(LinearGradient as any).attrs({
 
 export const EnrollText = styled.Text`
   color: #fff;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 17px;
+  font-family: Montserrat-Bold;
 `;
 
 export const RippleEnroll = styled(Ripple as any).attrs({

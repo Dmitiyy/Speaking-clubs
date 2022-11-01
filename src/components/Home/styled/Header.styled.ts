@@ -9,6 +9,7 @@ export const WrapHead = styled.View`
 
 export const HelloTitle = styled.Text`
   font-size: 20px;
+  font-family: Montserrat-Bold;
 `;
 
 export const Highlighted = styled.Text`
@@ -33,12 +34,10 @@ export const NextBg = styled.Text`
   font-weight: 900;
   font-size: 120px;
   color: rgba(0, 0, 0, 0.05);
-  line-height: 150px;
   text-transform: uppercase;
 `;
 
 export const NextWrapBg = styled.View`
-  height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,15 +65,15 @@ export const NextTools = styled.View`
 
 export const NextCaption = styled.Text`
   font-size: 28px;
-  font-weight: bold;
+  font-family: Montserrat-Bold;
 `;
 
 export const NextDescription = styled.Text`
   font-size: 18px;
-  font-weight: 400;
   width: 230px;
   margin-top: 7px;
   line-height: 25px;
+  font-family: Montserrat-Medium;
 `;
 
 export const NextPLus = styled.View`
