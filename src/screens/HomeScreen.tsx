@@ -1,12 +1,12 @@
 import { Container } from '../components/Home/styled/Home.styled';
 import { FC, Fragment } from 'react';
 import { StyleSheet } from 'react-native';
+import { FlatGrid } from 'react-native-super-grid';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import { Header } from '../components/Home/Header';
 import { Meetings } from '../components/Home/Meetings';
 import { MeetingsCardComponent } from '../components/Home/MeetingsCard';
-import { FlatGrid } from 'react-native-super-grid';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { MeetingScreen } from './MeetingScreen';
 
 export type RootStackParamList = {
